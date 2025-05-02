@@ -1,0 +1,39 @@
+{
+	"name": "SpeedCast - PHP",
+
+	"image": "mcr.microsoft.com/devcontainers/php:1-8.2-bullseye",
+
+	"runArgs": [
+		"--network=local-dev"
+	],
+
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {}
+	},
+
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"eamodio.gitlens",
+				"ms-azuretools.vscode-docker",
+				"neilbrayfield.php-docblocker",
+				"MehediDracula.php-namespace-resolver"
+			],
+			"settings": {
+				"php.suggest.basic": false,
+				"php.validate.enable": false,
+				"php.validate.executablePath": "/opt/homebrew/bin/php",
+				"namespaceResolver.sortOnSave": true
+			}
+		}
+	},
+
+	"postCreateCommand": "docker-php-ext-install pdo_mysql",
+
+	"forwardPorts": [
+		8080,
+		9000
+	],
+
+	"remoteUser": "root"
+}
