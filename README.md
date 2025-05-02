@@ -14,7 +14,7 @@ Requirements:
 
 **1. Clone the repository**
 ```bash
-git clone git@13.250.13.72:speedcast/speedcast-backend.git
+git clone https://github.com/HtunLynnKhant/Speed_cast.git
 ```
 
 **2. Copy `.env.example`**
